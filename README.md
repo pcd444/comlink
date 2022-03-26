@@ -1,3 +1,9 @@
+# PRE README.
+
+I pcd444 did not make any of this. I forked it to add my notes to the code to further my understanding of the code. 
+TY
+
+
 # Comlink
 
 Comlink makes [WebWorkers][webworker] enjoyable. Comlink is a **tiny library (1.1kB)**, that removes the mental barrier of thinking about `postMessage` and hides the fact that you are working with workers.
