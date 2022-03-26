@@ -10,7 +10,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+/*
+ * %%%MY: NOTES
+ * This file jus consists of types to be used in the main comlink file
+*/
+// %%% interface for a object that can be a source of events. (in the name duh)
 export interface EventSource {
   addEventListener(
     type: string,
@@ -24,7 +28,7 @@ export interface EventSource {
     options?: {}
   ): void;
 }
-
+// %%% I think this inforces that you use the origin
 export interface PostMessageWithOrigin {
   postMessage(
     message: any,
@@ -32,7 +36,7 @@ export interface PostMessageWithOrigin {
     transfer?: Transferable[]
   ): void;
 }
-
+// %%% port1
 export interface Endpoint extends EventSource {
   postMessage(message: any, transfer?: Transferable[]): void;
 
