@@ -66,7 +66,7 @@ export interface HandlerWireValue {
 export type WireValue = RawWireValue | HandlerWireValue;
 
 export type MessageID = string;
-
+// %%% The message types below (get,set,...) all corrrespond to the different proxy hooks.
 export const enum MessageType {
   GET = "GET",
   SET = "SET",
