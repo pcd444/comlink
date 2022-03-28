@@ -373,6 +373,14 @@ function throwIfProxyReleased(isReleased: boolean) {
   }
 }
 
+/* %%% function description and details. 
+ * This is the function that directly creates the proxy of the worker. 
+ * The reason why the behavior below is just not put in wrap is because of the below function's
+ * need for recursion. This is for the case of wrappedObj.a.b.c, as you can see that code isn't just a
+ * single get hook. So what is doen is the wrappedObj.a get is proxied to return another proxy. And the
+ * new proxy knows to doe similar. Information is kept by the path argument, which is built up to stor all the a b and c above. 
+ *
+*/
 function createProxy<T>(
   ep: Endpoint,
   path: (string | number | symbol)[] = [],
