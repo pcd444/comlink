@@ -401,6 +401,7 @@ function createProxy<T>(
           });
         };
       }
+      // %%% Below is when the actuall work happens most of the time. This is because what await is doing is calling a 'then' method.
       if (prop === "then") {
         if (path.length === 0) {
           return { then: () => proxy };
